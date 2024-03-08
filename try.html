@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Cards with Voice Command</title>
+    <style>
+        /* CSS for card styling (optional) */
+        .card {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Show Cards with Voice Command</h1>
+    <button id="voiceCommandButton">Start Voice Command</button>
+    <div id="cardContainer"></div>
+
+    <script>
+        // Define an object containing information about cards
+        var cardsObject = [
+            { id: 1, name: "Card 1", description: "Description for Card 1" },
+            { id: 2, name: "Card 2", description: "Description for Card 2" },
+            { id: 3, name: "Card 3", description: "Description for Card 3" }
+        ];
+
+        // Function to dynamically create and display cards from the cardsObject
+        function showCards() {
+            // Select the container where cards will be displayed
+            var container = document.getElementById("cardContainer");
+            
+            // Clear the container before displaying new cards
+            container.innerHTML = "";
+
+            // Loop through the cardsObject array
+            for (var i = 0; i < cardsObject.length; i++) {
+                // Create HTML string for each card
+                var cardHTML = `
+                    <div class="card">
+                        <h2>${cardsObject[i].name}</h2>
+                        <p>${cardsObject[i].description}</p>
+                    </div>
+                `;
+                
+                // Append cardHTML to container
+                container.innerHTML += cardHTML;
+            }
+        }
+
+      
+    </script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+<style>
+
+.cards-div
+{
+    border: 1px solid blue;
+height: 60vh;
+display: flex;
+justify-content: space-around;
+
+}
+
+.cards
+{
+    color:white;
+height: 30vh;
+width: 40vh;
+background-color: purple;
+
+
+}
+
+
+.name
+{
+    font-weight: 600;
+    font-size: 20px;
+
+}
+
+.intro
+{
+    color: aliceblue;
+border: 2px solid yellow;
+
+}
+
+
+</style>
+
+</head>
+<body>
+
+    <button id="btn1" onclick="btn2('button1')">button1</button><button id="btn2" onclick="btn2('button2')">button2</button>
+
+
+<div class="cards-div" id="main">
+
+<div>
+    <h1>
+
+    </h1>
+    <p></p>
+</div>
+</div>
+
+
+
+
+</body>
+</html>
+
+
+<script>
+
+
+const data = 
+[
+{
+    btn:'button2',
+title: "Hasnain",
+intro: "my name is hasnain"
+} , 
+{
+    btn:'button2',
+title:"muzammil1",
+intro: "my name is muzammil"
+
+},
+
+{
+btn:'button1',    
+title: "Abdul2",
+intro:"my name is dash"
+},
+{
+    btn:'button1',
+title: "hussnain2",
+intro:"my name is dash"
+},
+{
+title: "hussnain1",
+intro:"my name is dash"
+},{
+title: "muzz2",
+intro:"my name is dash"
+},{
+title: "muzz1",
+intro:"my name is dash"
+}
+]
+
+window.addEventListener("load",()=>{
+    all.forEach((item)=>{
+    var main = document.getElementById('main');
+
+main.innerHTML+=`
+<div class='cards'>
+    <h1 class='name'>
+${item.title}
+    </h1>
+    <p class="intro">${item.intro}</p>
+</div>`
+    })
+})
+function btn2(search){
+    var temparry = data.filter((item)=>item.btn==search)
+    var main = document.getElementById('main');
+    main.innerHTML=" "
+for(var a=0; a< temparry.length; a++){
+    main.innerHTML+="<div class='cards'><h1 class='name'>"+temparry[a].title+"</h1><p>"+temparry[a].intro+"</p></div>"
+
+
+}
+}
+
+                                                  
+
+
+
+</script>

@@ -1,0 +1,483 @@
+
+
+
+body
+{
+    margin: 0%;
+}
+
+.main-div
+{
+    display: flex;
+flex-wrap: wrap;
+align-items: center;
+justify-content: space-around;
+height: 100%;
+}
+
+
+/* middle div css */
+
+.middle-search-div
+{
+  height: 47vh;
+  border: 2px solid blue;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background: url(./2151158557.jpg) center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  align-items: center;
+    }
+
+    
+
+
+    .search-div
+    {
+        /* border: 1px solid yellow; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+
+   
+    .container {
+      position: relative;
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    
+    #searchInput {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border:none;
+      border-radius: 5px;
+      font-size: 16px;
+    outline: none;
+    
+    }
+
+    #searchInput:focus
+    {
+      border: 2px solid transparent; /* Set a transparent border */
+      /* border-radius: 5px; Optional: Add border-radius for rounded corners */
+      box-shadow: 0 0 10px rgba(0, 0, 255, 0.5); /* Add a box shadow with a blue glow */
+    }
+    
+    #searchResults {
+      position: absolute;
+      width: 93%;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 10px;
+      max-height: 200px;
+      overflow-y: auto;
+      background-color: #fff;
+      display: none;
+      overflow-x: hidden;
+    }
+    
+      
+      .book-link {
+        display: block;
+        color: #1a0dab; /* Google search result text color */
+        text-decoration: none;
+        font-size: 1.1em;
+        padding: 5px 0;
+        background-color: white;
+      }
+      
+      .book-link:hover {
+        background-color: #f0f0f0; /* Light gray background on hover */
+      }
+      
+      .icon {
+        margin-right: 5px;
+        color: blue; /* Blue color for the book icon */
+      }
+
+
+
+/* Categories div */
+
+.categories-div
+{
+  /* border: 2px solid yellow; */
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  height: 30vh;
+  padding: 10px;
+}
+
+.categories-btns-div
+{
+  /* border: 2px solid yellow; */
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.category-btn
+{    color: darkblue;
+  border-top: none;
+  height: 7vh;
+  border-right: 1px solid goldenrod;
+  border-left: 1px solid goldenrod;
+  border-bottom: none;
+  outline: 0;
+  padding: 0px;
+  font-size: 1rem;
+  font-weight: 500;
+  background-color: white;
+  box-shadow: 1px 1px 2px 3px #eeeeef;
+}
+
+.category-btn:hover
+{
+  background-color: #403b8b;
+  color: white;
+  transition: 100ms all ease-in-out;
+}
+
+
+
+
+
+/* middle boks div css */
+
+.middle-books-div
+{
+/* border: 2px solid purple; */
+display: flex;
+justify-content: space-around;
+height: auto;
+
+}
+
+.books-cards-div
+{
+
+/* border: 3px solid black; */
+display: flex;
+justify-content: space-around;
+align-items: center;
+flex-wrap: wrap;
+height: auto;
+}
+/* 
+.cards
+{
+
+  height: 40vh;
+  border: 2px solid white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 2vh;
+  box-shadow: 0px 1px 3px 2px #d7d7d7;
+  border-bottom: 3px solid blue;
+
+} */
+.cards {
+  height: 40vh;
+  border: 2px solid white;
+  display: flex;
+  align-items: center;
+  margin-bottom: 3vh;
+ box-shadow: 2px 2px 15px #c6c6c6;
+  position: relative; /* Add position relative */
+  transition: border-width 0.3s; /* Add transition for smooth effect */
+}
+
+.cards::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%; /* Position in the middle */
+  width: 50%; /* Half of the width of .cards */
+  height: 3px; /* Adjust height as needed */
+  background-color: blue;
+  transform: translateX(-50%); /* Center the pseudo-element */
+  transition: width 500ms ease-in-out; /* Initial transition */
+  display: none;
+}
+
+.cards:hover::after {
+  width: 70%; /* Increase width on hover */
+}
+
+
+
+
+
+
+.book-img-div
+{
+/* border: 2px solid red; */
+height: 39vh;
+display: flex;
+align-items: center;
+justify-content: space-around;
+overflow: hidden;
+
+}
+
+.book-img-div:hover .book-img
+{
+  transform: scale(1.2);
+}
+
+
+/* .book-text-div
+{
+/* border: 1px solid blue; */
+/* height: 39vh;
+display: flex;
+flex-direction: column;
+flex-wrap: wrap; */
+/* flex-direction: column; */
+/* justify-content: space-around; */
+/* align-items: center; */
+/* padding: 6px;
+text-transform: capitalize; 
+}*/
+
+.book-text-div {
+  text-align: start;
+  height: 40vh;
+  height: 41vh;
+  height: 39vh;
+  display: flex;
+  flex-direction: column;
+  padding: 6px;
+  text-transform: capitalize;
+  margin-left: 2vh;
+}
+
+
+.book-img
+{
+  height: 34vh;
+object-fit: fill;
+width: 32vh;
+transition: transform 0.3s ease;
+overflow: hidden;
+/* border: 2px solid goldenrod; */
+cursor: default;
+}
+
+.book-title{
+  font-size: 1.6em;
+  font-family: initial;
+  color: #374c66; 
+  text-transform: uppercase;max-width: 47vh; height: 7vh;text-align: center;
+} 
+
+/* 
+{
+  max-width: 47vh; height: 7vh;
+  color: #0b064
+  text-align: center;
+  cursor: default;
+  font-size: 1.6em;
+  
+ 
+
+}  */
+
+/* .book-txt
+{
+  cursor: default;
+  color: darkgoldenrod;
+  font-weight: bold;
+  font-size: 1.1em;
+  margin-top: 1.3vh;
+text-transform: capitalize;
+} */
+.book-txt {
+  cursor: default;
+  color: #abaaa8;
+  font-weight: bold;
+  font-size: 1.1em;
+  margin-top: 1.3vh;
+  font-family: cursive;
+  text-transform: capitalize;
+
+}
+.explore-btn{
+  width: 310px;
+  
+  background-color: #00152b;
+  outline: none;margin-top: 1vh;
+  border: none; height: 6.5vh;
+}
+
+/* .explore-btn
+{
+
+  border-radius: 4px;
+ 
+  width: 15vh;
+  background-color: #3d6db5;
+  border: 2px solid #3d6db5;
+  margin-left: 16vh;
+} */
+/* 
+.explore-btn a
+{
+  color: white;
+  text-decoration: none;
+  font-size: 1em;
+  font-weight: bold;
+} */
+.explore-btn a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.3em;
+  font-family: sans-serif;
+  font-weight: bold;
+  width: 276px;
+}
+
+
+.explore-btn:hover
+{
+  border: 2px solid #3d6db5;
+  background-color: white;
+  transition: 500ms all ease-in-out;
+}
+
+.explore-btn:hover a 
+{
+  color: #3d6db5;
+}
+
+
+
+/* heart like btn */
+/* .heart
+{
+
+  height: 11%;
+  background: url(https://cssanimation.rocks/images/posts/steps/heart.png) no-repeat;
+  background-position: -23px;
+  cursor: pointer;
+  transition: background-position 1s steps(28);
+  transition-duration: 0s;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* border: 1px solid blue;
+  position: relative;
+  top: -16vh;
+} */
+.heart {
+  height: 25%;
+  background: url(https://cssanimation.rocks/images/posts/steps/heart.png) no-repeat;
+  background-position: -23px;
+  cursor: pointer;
+  transition: background-position 1s steps(28);
+  transition-duration: 0s;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* border: 1px solid blue; */
+  position: relative;
+  top: 14vh;
+  left: -21px;
+}
+.heart.is-active {
+  transition-duration: 1s;
+  background-position: -2824px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Media queries for smaller devices */
+
+@media only screen and (max-width: 575.98px) {
+  /* CSS rules for smaller devices go here */
+  body {
+    font-size: 14px; /* Example style change for smaller devices */
+  }
+.main-div{
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: auto;
+}
+.book-text-div
+{
+  
+  border: 1px solid blue;
+  height: 41vh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: stretch;
+  align-items: center;
+  padding: 0px;
+  text-transform: capitalize;
+}
+.cards
+{
+  height: 44vh;
+}
+.book-img-div
+{
+  height: 43vh;
+}
+.book-text-div
+{
+  height: 43vh;
+  justify-content: center;
+}
+.explore-btn
+{
+  width: 16vh;
+}
+.heart
+{ 
+  height: 12%;
+ background-position: -35px;
+  position: relative;
+ top: -18vh;
+}
+.heart.is-active {
+  transition-duration: 1s;
+  background-position: -2835px;
+}
+
+
+
+
+
+
+
+  .explore-btn
+{
+  margin-left: 0;
+}
+}
+
