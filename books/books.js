@@ -933,7 +933,7 @@ background-color:#403b8b;`
                       // If the command is recognized, call the showCards function
                       showall();
                   }
-                  else if(transcript.includes('hello') || transcript.includes('hi'))
+                  else if(transcript.includes('hello'))
                   {
                     alert("hello! Dear user, How are you?");
                   }
@@ -941,7 +941,7 @@ background-color:#403b8b;`
                   {
                     hideallcards();
                   }
-                  else if(transcript.includes('start searching') || transcript.includes('search books'))
+                  else if(transcript.includes('search books'))
                   {
                     handlesearching();
                   }
@@ -956,6 +956,14 @@ background-color:#403b8b;`
                 else if(transcript.includes('reload'))
                 {
                   handleReload();
+                }
+                else if(transcript.includes('tell me total books'))
+                {
+                  alert(allbooks.length);
+                }
+                else
+                {
+                  alert("say valid commands");
                 }
               }
               //  } 
