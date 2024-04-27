@@ -3,54 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Show Cards with Voice Command</title>
+    <title>Document</title>
     <style>
-        /* CSS for card styling (optional) */
-        .card {
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            padding: 10px;
-            margin: 10px;
-        }
+
+.like-button {
+  background-color: transparent;
+  border: none;
+  color: #333; /* Default color for the button text */
+  cursor: pointer;
+  font-size: 16px;
+  padding: 5px 10px;
+  position: relative;
+}
+
+.heart {
+  background-color: transparent;
+  background-image: url('./heart.png'); /* Specify the path to your heart icon image */
+  background-size: cover;
+  display: inline-block;
+  height: 20px; /* Adjust as needed */
+  width: 20px; /* Adjust as needed */
+  margin-right: 5px; /* Spacing between heart icon and button text */
+  filter: grayscale(100%); /* Initially grayscale */
+}
+
+.heart.liked {
+  filter: none; /* Remove grayscale filter when liked */
+}
+
+
     </style>
 </head>
 <body>
-    <h1>Show Cards with Voice Command</h1>
-    <button id="voiceCommandButton">Start Voice Command</button>
-    <div id="cardContainer"></div>
+    
 
-    <script>
-        // Define an object containing information about cards
-        var cardsObject = [
-            { id: 1, name: "Card 1", description: "Description for Card 1" },
-            { id: 2, name: "Card 2", description: "Description for Card 2" },
-            { id: 3, name: "Card 3", description: "Description for Card 3" }
-        ];
-
-        // Function to dynamically create and display cards from the cardsObject
-        function showCards() {
-            // Select the container where cards will be displayed
-            var container = document.getElementById("cardContainer");
-            
-            // Clear the container before displaying new cards
-            container.innerHTML = "";
-
-            // Loop through the cardsObject array
-            for (var i = 0; i < cardsObject.length; i++) {
-                // Create HTML string for each card
-                var cardHTML = `
-                    <div class="card">
-                        <h2>${cardsObject[i].name}</h2>
-                        <p>${cardsObject[i].description}</p>
-                    </div>
-                `;
-                
-                // Append cardHTML to container
-                container.innerHTML += cardHTML;
-            }
-        }
-
+    <button class="like-button" onclick="toggleLike()">
+        <span class="heart" id="heart"></span>
+        Like
+      </button>
       
-    </script>
+
+
 </body>
 </html>
+<script>
+
+function toggleLike() {
+  var heartIcon = document.getElementById("heart");
+  heartIcon.classList.toggle("liked");
+}
+
+
+</script>

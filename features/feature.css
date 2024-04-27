@@ -1,0 +1,73 @@
+
+body
+{
+    margin: 0%;
+}
+
+
+.main
+{
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.images
+{
+  border: 2px solid black;
+height: auto;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
+padding-top: 2vh;
+
+}
+
+.features-temp
+{
+  height: 50%;
+width: 90%;
+  /* border: 1px solid blue; */
+
+}
+
+
+
+
+
+
+
+
+
+
+#middle {
+    --color: blue; /* Set the border color for the middle image */
+    --border: 5px;   /* Set the border thickness for the middle image */
+    --offset: 20px;   /* Control the offset for the middle image */
+    --gap: 5px;       /* Set the gap on hover for the middle image */
+  }
+  
+  #middle {
+    --_c: var(--color) var(--border), #0000 0 calc(100% - var(--border)),var(--color) 0;
+    --_o: calc(3*var(--offset));
+    padding: 
+      calc(var(--gap) + var(--border))
+      calc(var(--gap) + var(--border) + var(--offset))
+      calc(var(--gap) + var(--border) + var(--offset))
+      calc(var(--gap) + var(--border));
+    background: 
+      linear-gradient(      var(--_c)) var(--_o) var(--_o), 
+      linear-gradient(90deg,var(--_c)) var(--_o) var(--_o);
+    background-size: calc(100% - var(--_o)) calc(100% - var(--_o));
+    background-repeat: no-repeat;
+    filter: grayscale(.4);
+    transition: .5s;
+    cursor: pointer;
+  }
+  
+  #middle:hover {
+    background-position: 0px 0px;
+    background-size: calc(100% - var(--offset)) calc(100% - var(--offset));
+    filter: grayscale(0);
+  }
+  

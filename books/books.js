@@ -786,7 +786,7 @@ cards_div.innerHTML='';
               <h6 class="book-txt">pages :- <span id="pages">${allbooks[a].pages}</span> </h6>
               <button type="button" class="explore-btn"><a href="${allbooks[a].link}">Book Details</a></button>
           </div>
-          <div class="heart col-lg-1 col-xl-1 col-xxl-1 col-md-1 col-sm-1 col-1"></div>
+          <button class="heart col-lg-1 col-xl-1 col-xxl-1 col-md-1 col-sm-1 col-1" ><i class="fa-regular fa-heart"></i></button>
       </div>
       </div>`;
   }
@@ -822,10 +822,10 @@ function showCards(cate){
 for(var a=0; a< temparry.length; a++){
   cards_div.innerHTML += `
   <div class="cards col-lg-5 col-xl-5 col-xxl-5 col-md-5 col-sm-11 col-11">
-    <div class="book-img-div col-lg-4 col-xl-4 col-xxl-4 col-md-4 col-sm-4 col-4">
+    <div class="book-img-div col-lg-4 col-xl-4 col-xxl-4 col-md-4 col-sm-5 col-5">
       <img src="${temparry[a].imagesrc}" alt="${temparry[a].title}" class="book-img">
     </div>
-    <div class="book-text-div col-lg-7 col-xl-7 col-xxl-7 col-md-7 col-sm-7 col-7">
+    <div class="book-text-div col-lg-7 col-xl-7 col-xxl-7 col-md-7 col-sm-6 col-6">
       <h4 class="book-title" id="title">${temparry[a].title}</h4>
       <h6 class="book-txt">Written by :- <span class="author" id="author">${temparry[a].author}</span></h6>
       <h6 class="book-txt">Category :- <span class="author" id="category">${temparry[a].category}</span></h6>
@@ -833,7 +833,7 @@ for(var a=0; a< temparry.length; a++){
       <h6 class="book-txt">Pages :- <span id="pages">${temparry[a].pages}</span></h6>
       <button type="button" class="explore-btn"><a href="${temparry[a].link}">Book Details</a></button>
     </div>
-    <div class="heart col-lg-1 col-xl-1 col-xxl-1 col-md-1 col-sm-1 col-1"></div>
+    <button class="heart col-lg-1 col-xl-1 col-xxl-1 col-md-1 col-sm-1 col-1"><i class="fa-regular fa-heart"></i></button>
   </div>
 `;
 
@@ -861,11 +861,11 @@ allbutton.style.color = "white";
 
 // like btn
 
-$(document).ready(function() {
-  $(document).on("click", ".heart", function() {
-    $(this).toggleClass("is-active");
-  });
-});
+function toggleLike() {
+  var heartIcon = document.getElementById("heart");
+  heartIcon.classList.toggle("liked");
+}
+
 
 
 
@@ -981,6 +981,9 @@ background-color:#403b8b;`
       }
   }
 
+  window.onload= startVoiceCommand();
   // Add event listener to the button to start voice command
   window.onload = bluecolor();
- window.onload= startVoiceCommand();
+  window.onload = showall();
+
+

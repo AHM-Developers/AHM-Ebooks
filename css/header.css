@@ -1,0 +1,267 @@
+
+/* header css  desktop*/
+
+.desktop-nav
+{
+  border: 2px solid red;
+  display: flex;
+  flex-wrap: wrap;
+  height: 15vh;
+  align-items: start;
+  background-color: #0018A8;
+  
+}
+
+.navbar1 {
+  transition: transform 0.3s ease-out;
+  height: 15vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #0018A8;
+  z-index: 2;
+  color: white;
+}
+
+.links {
+  color: white;
+}
+
+
+
+
+.logo-div
+{
+    /* border: 2px solid yellow; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 12vh;
+
+}
+
+#logo-txt {
+  width: 30vh;
+  font-weight: 700;
+  color: white;
+  position: relative;
+  left: 3vh;
+  top: 0vh;
+  cursor: pointer;
+  font-size: 2em;
+  letter-spacing: 0.5px;
+ 
+}
+
+.logo
+{
+   
+    height: 12vh;
+    width: 12vh;
+    object-fit: cover;
+    transform: scale(1);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.links-div
+{
+    height: 12vh;
+    /* border: 2px solid yellow; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+
+}
+
+/* .links
+{
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+}
+*/
+.links:hover
+{
+    color: white;
+
+} 
+
+.links {
+position: relative;
+text-decoration: none;
+	color: white;
+	font-weight: 700;
+	vertical-align: top;
+
+	&::before {
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 3px;
+		border-radius: 4px;
+		background-color: white;
+		bottom: 0;
+		left: 0;
+        color: white;
+		transform-origin: right;
+		transform: scaleX(0);
+		transition: transform .3s ease-in-out;
+	}
+
+	&:hover::before {
+		transform-origin: left;
+		transform: scaleX(1);
+      
+	}
+	
+}
+
+
+
+
+/* login button css */
+
+.wrap {
+    
+    display: flex;
+    align-items: center;
+    justify-content: start;
+  }
+  
+  #login-btn {
+    width: 126px;
+    height: 53px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    font-weight: bolder;
+    color: #2d36a1;
+    border: none;
+    border-radius: 7px;
+    transition: all 0.3s ease-in-out 0s;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    padding: 8px;
+    text-align: center;
+    padding-top: 13px;
+    }
+  
+  #login-btn::before {
+  content: '';
+    /* border-radius: 1000px; */
+    min-width: calc(140px + 12px);
+    min-height: calc(53px + 12px);
+    /* border: 6px solid #00FFCB; */
+    /* box-shadow: 0 0 60px rgba(0,255,203,.64); */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all .3s ease-in-out 0s;
+  }
+  
+  #login-btn:hover, #login-btn:focus {
+    color:white;
+    border: 2px solid #2d36a1;
+    background-color: transparent;
+
+    
+
+    
+  }
+  
+  #login-btn:hover::before, #login-btn:focus::before {
+    opacity: 1;
+  }
+  
+  #login-btn::after {
+    
+    content: '';
+    width: 126px;
+    height: 53px;
+    border-radius: 100%;
+    border: 6px solid #00FFCB;
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: ring 1.5s infinite;
+  }
+  
+  #login-btn:hover::after, #login-btn:focus::after {
+    animation: none;
+    display: none;
+    border: none;
+    
+  }
+  
+  @keyframes ring {
+    0% {
+      width: 30px;
+      height: 30px;
+      opacity: 1;
+    }
+    100% {
+      width: 300px;
+      height: 300px;
+      opacity: 0;
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Media query for small devices (up to 576px wide) */
+@media only screen and (min-width: 320px)
+{
+
+  .title
+  {
+  height: 2em;
+  padding: 0rem;
+  font-size: 2em;
+
+  }
+
+
+
+
+}
+
+/* Media query for medium devices (577px to 768px wide) */
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+  /* CSS rules for medium devices */
+}
+
+/* Media query for large devices (769px to 992px wide) */
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  /* CSS rules for large devices */
+}
+
+/* Media query for extra-large devices (993px to 1200px wide) */
+@media only screen and (min-width: 993px) and (max-width: 1200px) {
+  /* CSS rules for extra-large devices */
+}
+
+
